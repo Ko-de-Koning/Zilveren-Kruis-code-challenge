@@ -228,6 +228,7 @@ import CustomSelect from '../CustomSelect.vue';
                         <CustomSelect
                             label="Wat is de reden van uw aanvraag?"
                             id-label="aanmeldreden-label"
+                            placeholder="Er is nog niets geselecteerd"
                             :options="[
                                 'Nieuwe werkgever met collectiviteit bij Zilveren Kruis',
                                 'Overstappen per 1-1-2023 naar Zilveren Kruis'
@@ -431,36 +432,22 @@ import CustomSelect from '../CustomSelect.vue';
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="form-input my-4">
-                            <div class="input__group">
-                                <label class="input__title">
-                                    Kies je betaaltermijn
-                                </label>
-                                <select class="form-control">
-                                    <option>per maand</option>
-                                    <option>per kwartaal</option>
-                                    <option selected>per jaar</option>
-                                </select>
-                            </div>
-                        </div>
+                        <CustomSelect
+                            label="Kies je betaaltermijn"
+                            id-label="betaaltermijn-label"
+                            :options="['Per maand', 'Per kwartaal', 'Per jaar']"
+                        />
                     </div>
                     <div class="form-group">
                         <h3>Eigen risico</h3>
-                        <div class="form-input my-4">
-                            <div class="input__group">
-                                <label class="input__title">
-                                    Kies de hoogste van het eigen risico
-                                </label>
-                                <select class="form-control">
-                                    <option>
-                                        € 385 - verplicht eigen risico
-                                    </option>
-                                    <option>
-                                        € 885 - korting van € 22 per jaar
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
+                        <CustomSelect
+                            label="Kies de hoogste van het eigen risico"
+                            id-label="eigen-risico-label"
+                            :options="[
+                                '€ 385 - verplicht eigen risico',
+                                '€ 885 - korting van € 22 per jaar'
+                            ]"
+                        />
                     </div>
                     <div class="form-group">
                         <h3>Aanvullende verzekering</h3>
@@ -470,48 +457,29 @@ import CustomSelect from '../CustomSelect.vue';
                             vergoeding verschilt per pakket.hoogte van de
                             vergoeding verschilt per pakket
                         </p>
-                        <div class="form-input my-4">
-                            <div class="input__group">
-                                <label class="input__title">
-                                    Kies uw aanvullende verzekering
-                                </label>
-                                <select class="form-control">
-                                    <option selected>
-                                        Geen aanvullende verzekering
-                                        geselecteerd
-                                    </option>
-                                    <option>
-                                        Aanvullend 1 - € 21,38 per jaar
-                                    </option>
-                                    <option>
-                                        Aanvullend 2 - € 85,06 per jaar
-                                    </option>
-                                    <option>
-                                        Aanvullend 3 - € 198,63 per jaar
-                                    </option>
-                                    <option>
-                                        Aanvullend 4 - € 359,73 per jaar
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
+                        <CustomSelect
+                            label="Kies uw aanvullende verzekering"
+                            id-label="aanvullend-label"
+                            :options="[
+                                'Geen aanvullende verzekering geselecteerd',
+                                'Aanvullend 1 - € 21,38 per jaar',
+                                'Aanvullend 2 - € 85,06 per jaar',
+                                'Aanvullend 3 - € 198,63 per jaar',
+                                'Aanvullend 4 - € 359,73 per jaar'
+                            ]"
+                        />
                     </div>
                     <div class="form-group">
-                        <div class="form-input my-4">
-                            <div class="input__group">
-                                <label class="input__title">
-                                    Kies uw tandartsverzekering
-                                </label>
-                                <select class="form-control">
-                                    <option selected>
-                                        Geen tandartsverzekering geselecteerd
-                                    </option>
-                                    <option>Tand 1 - € 80,28 per jaar</option>
-                                    <option>Tand 2 - € 221,65 per jaar</option>
-                                    <option>Tand 3 - € 449,36 per jaar</option>
-                                </select>
-                            </div>
-                        </div>
+                        <CustomSelect
+                            label="Kies uw tandartsverzekering"
+                            id-label="tandarts-label"
+                            :options="[
+                                'Geen tandartsverzekering geselecteerd',
+                                'Tand 1 - € 80,28 per jaar',
+                                'Tand 2 - € 221,65 per jaar',
+                                'Tand 3 - € 449,36 per jaar'
+                            ]"
+                        />
                     </div>
 
                     <h2 class="mt-5">Controleren</h2>

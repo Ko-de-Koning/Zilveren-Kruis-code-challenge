@@ -2,7 +2,9 @@
 defineProps<{
     label: string;
     idLabel: string;
+    placeholder?: string;
     options: string[];
+    disabled?: boolean; // TODO
 }>();
 </script>
 
@@ -14,6 +16,16 @@ defineProps<{
 
         <div class="input__group">
             <select class="form-control">
+                <option
+                    class="text-muted"
+                    v-if="placeholder"
+                    value=""
+                    disabled
+                    selected
+                    hidden
+                >
+                    {{ placeholder }}
+                </option>
                 <option v-for="option in options" :key="option">
                     {{ option }}
                 </option>
